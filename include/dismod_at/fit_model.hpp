@@ -53,6 +53,8 @@ namespace dismod_at {
       // -------------------------------------------------------------------
       // set during constructor and otherwise const
       //
+      // Check if methods should log outputs to std::cout
+      bool                              trace_init_;
       // Prior for variable differences. Only difference for which
       // the upper limit is less than + infinity or the lower limit
       // is greater than minus infinity are included. Note that all the

@@ -219,7 +219,8 @@ prior_table_   ( prior_table )                      ,
 prior_object_  ( prior_object )                     ,
 random_const_  ( random_const )                     ,
 data_object_   ( data_object )
-{  if( trace_init )
+{  bool trace_init_ = trace_init;
+   if( trace_init )
       std::cout << "Begin dismod_at: fit_model constructor\n";
    //
    assert( bound_random >= 0.0 );
@@ -1087,6 +1088,8 @@ void fit_model::sample_posterior(
    }
    if( msg != "" )
    {  log_message(db_, &std::cerr, "warning", msg);
+      if ( trace_init_ )
+         std::cout << msg;
       assert( sample_out.size() == 0 );
       return;
    }
