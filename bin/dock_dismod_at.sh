@@ -156,7 +156,7 @@ set -e -u
 # {xrst_spell_off}
 # {xrst_code sh}
    dismod_at_version='2025.7.11'
-   dismod_at_hash='97cb2fd43d8b99c9cd1e0cfb8417abcead49cf55'
+   dismod_at_hash='9c4cf573b56265a888729f80eb6c502ca47e268a'
 # {xrst_code}
 # {xrst_spell_on}
 #
@@ -296,7 +296,7 @@ FROM dismod_at.base
 WORKDIR /home
 #
 # Get source corresponding to dismod_at-$dismod_at_version
-RUN git clone https://github.com/bradbell/dismod_at.git dismod_at.git
+RUN git clone https://github.com/ntemiq/dismod_at.git dismod_at.git
 #
 # WORKDIR
 WORKDIR /home/dismod_at.git
