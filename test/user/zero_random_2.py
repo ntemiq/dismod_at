@@ -227,7 +227,7 @@ for command in [ 'init', 'fit' ] :
       variables = 'both'
       cmd.append(variables)
    print( ' '.join(cmd) )
-   flag = subprocess.call( cmd )
+   flag = subprocess.run( cmd, capture_output=True )
    if flag != 0 :
       sys.exit('The dismod_at ' + command + ' command failed')
 # -----------------------------------------------------------------------
